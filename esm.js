@@ -1,12 +1,9 @@
-const css = (selector, content) => {
-    const attributes = Object.entries(content).map(([key, value]) => {
-        if(typeof value == "object"){
-            return css(key, value)
-        }else{
-            return `${key.replace(/([A-Z])/g, "-$1").toLowerCase()}:${value};`
-        }
-    }).join('')
-    return `${selector}{${attributes}}`
-} 
+const css = content => Object.entries(content).map(([key, value]) => {
+    if(typeof value == "object"){
+        return `${key}{${css(value)}}`
+    }else{
+        return `${key.replace(/([A-Z])/g, "-$1").toLowerCase()}:${value};`
+    }
+}).join('')
 
 export default css
