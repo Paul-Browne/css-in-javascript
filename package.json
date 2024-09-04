@@ -1,0 +1,11 @@
+{
+  "name": "css-in-javascript",
+  "version": "1.0.2",
+  "description": "putting css in javascript since 2024",
+  "main": "esm.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Browne",
+  "license": "MIT"
+}
